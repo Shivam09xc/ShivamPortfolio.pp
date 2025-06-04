@@ -97,7 +97,7 @@ export const siteConfig = {
       image: "https://placehold.co/600x400.png", 
       dataAiHint: "agile sprint",
       techStack: ["MongoDB", "Express", "React", "Node.js", "Socket.IO"],
-      liveLink: "https://example.com/smart-sprints-demo", 
+      liveLink: "https://smart-sprints.vercel.app/", 
       repoLink: "https://github.com/Shivam09xc/Smart-Sprints.git",
     },
     {
