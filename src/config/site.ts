@@ -40,8 +40,8 @@ export type Article = {
 import { Github, Linkedin, Twitter } from 'lucide-react';
 
 export const siteConfig = {
-  name: "TechCircuit",
-  portfolioOwnerName: "Alex Chen",
+  name: "Shivam's Portfolio",
+  portfolioOwnerName: "Shivam Soni",
   navItems: [
     { title: "Home", href: "#home" },
     { title: "Projects", href: "#projects" },

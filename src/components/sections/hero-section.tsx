@@ -12,7 +12,7 @@ export default function HeroSection() {
       </div>
       <div className="container mx-auto px-4 relative z-10">
         <h1 className="text-5xl md:text-7xl font-headline font-bold mb-6">
-          <span className="block text-foreground mb-2">Alex Chen</span>
+          <span className="block text-foreground mb-2">Shivam Soni</span>
           <AnimatedHeroText texts={titles} className="text-primary neon-glow-primary" />
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
