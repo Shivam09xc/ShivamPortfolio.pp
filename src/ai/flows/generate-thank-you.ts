@@ -1,15 +1,17 @@
+
 'use server';
 
 /**
- * @fileOverview A thank-you message generator AI agent.
+ * @fileOverview A thank-you message generator AI agent with email sending capability.
  *
- * - generateThankYouMessage - A function that handles the thank you message generation process.
+ * - generateThankYouMessage - A function that handles the thank you message generation and emailing process.
  * - GenerateThankYouInput - The input type for the generateThankYouMessage function.
  * - GenerateThankYouOutput - The return type for the generateThankYouMessage function.
  */
 
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
+import { Resend } from 'resend';
 
 const GenerateThankYouInputSchema = z.object({
   userName: z.string().describe('The name of the user submitting the form.'),
@@ -30,46 +32,42 @@ export async function generateThankYouMessage(
   // 1. Generate the AI-powered thank you message
   const flowResult = await generateThankYouMessageFlow(input);
 
-  // 2. Send the AI-generated message via email (Placeholder)
-  // The following is a placeholder to illustrate where email sending logic would go.
-  // To implement actual email sending:
-  //    a. Choose an email service provider (e.g., Resend, SendGrid, AWS SES).
-  //    b. Install their SDK (e.g., `npm install resend`).
-  //    c. Configure API keys/credentials securely (e.g., in .env).
-  //    d. Implement the email sending logic using the chosen service.
-
+  // 2. Send the AI-generated message via email
   const { userEmail, userName, portfolioOwnerName } = input;
   const { thankYouMessage } = flowResult;
 
-  /*
-  // --- Conceptual Example using a hypothetical email service ---
-  try {
-    // Import your email client/SDK at the top of the file
-    // e.g., import { Resend } from 'resend';
-    // const resend = new Resend(process.env.RESEND_API_KEY);
+  // IMPORTANT: For email sending to work:
+  // 1. Set your RESEND_API_KEY in your .env file.
+  // 2. Replace 'noreply@yourverifieddomain.com' with an email address from a domain you have verified with Resend.
+  const resendApiKey = process.env.RESEND_API_KEY;
+  const fromEmail = `${portfolioOwnerName}'s AI Assistant <noreply@yourverifieddomain.com>`; // REPLACE with your verified sending email
 
-    await resend.emails.send({
-      from: `${portfolioOwnerName} <your-verified-sending-email@example.com>`, // Replace with your sending email
-      to: [userEmail],
-      subject: `Thank you for your message, ${userName}!`,
-      html: `<p>Hi ${userName},</p>${thankYouMessage.replace(/\n/g, '<br>')}<p>Best regards,<br/>${portfolioOwnerName}'s AI Assistant</p>`,
-      // text: `Hi ${userName},\n\n${thankYouMessage}\n\nBest regards,\n${portfolioOwnerName}'s AI Assistant` // Optional text version
-    });
-    console.log(`AI-generated thank you email successfully sent to ${userEmail}`);
-  } catch (error) {
-    console.error('Failed to send AI-generated thank you email:', error);
-    // Decide how to handle email sending errors.
-    // The user on the website will still see the AI message.
-    // You might want to log this error for monitoring.
+  if (resendApiKey) {
+    const resend = new Resend(resendApiKey);
+    try {
+      await resend.emails.send({
+        from: fromEmail,
+        to: [userEmail],
+        subject: `Thank you for your message, ${userName}!`,
+        html: `<p>Hi ${userName},</p><p>${thankYouMessage.replace(/\n/g, '<br>')}</p><p>Best regards,<br/>${portfolioOwnerName}'s AI Assistant</p>`,
+        text: `Hi ${userName},\n\n${thankYouMessage}\n\nBest regards,\n${portfolioOwnerName}'s AI Assistant`
+      });
+      console.log(`AI-generated thank you email successfully sent to ${userEmail}`);
+    } catch (error) {
+      console.error('Failed to send AI-generated thank you email via Resend:', error);
+      // Log the email details if sending failed, so you can manually follow up or debug.
+      console.log(`[Email Fallback] To: ${userEmail}`);
+      console.log(`[Email Fallback] Subject: Thank you for your message, ${userName}!`);
+      console.log(`[Email Fallback] Body: ${thankYouMessage}`);
+      console.log('[Email Fallback] Hint: Check RESEND_API_KEY and verified domain in Resend.');
+    }
+  } else {
+    console.warn('RESEND_API_KEY is not set. Email not sent.');
+    // Log the email details if API key is missing
+    console.log(`[No API Key - Email Not Sent] To: ${userEmail}`);
+    console.log(`[No API Key - Email Not Sent] Subject: Thank you for your message, ${userName}!`);
+    console.log(`[No API Key - Email Not Sent] Body: ${thankYouMessage}`);
   }
-  // --- End of conceptual email sending example ---
-  */
-
-  // For now, we'll just log that an email would be sent.
-  // Remove this console.log when you implement actual email sending.
-  console.log(`[Placeholder] Email to: ${userEmail}`);
-  console.log(`[Placeholder] Subject: Thank you for your message, ${userName}!`);
-  console.log(`[Placeholder] Body: ${thankYouMessage}`);
 
   // 3. Return the generated message for display on the webpage
   return flowResult;
