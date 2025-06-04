@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Project } from '@/config/site';
+import type { Project } from '@/config/site';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card className="glassmorphism-darker overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-primary/30 flex flex-col h-full">
+    <Card className="group glassmorphism-darker overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-primary/30 flex flex-col h-full">
       <CardHeader>
         <div className="relative w-full h-48 mb-4 rounded-md overflow-hidden">
           <Image
