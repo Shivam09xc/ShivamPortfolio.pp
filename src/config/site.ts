@@ -64,7 +64,7 @@ export const siteConfig = {
       image: "https://placehold.co/600x400.png",
       dataAiHint: "3d printer",
       techStack: ["Python", "TensorFlow", "Flask", "React", "Docker"],
-      liveLink: "#",
+      liveLink: "https://example.com/smartprint-ai-demo",
       repoLink: "https://github.com/your-github-username/smartprint-ai-placeholder",
     },
     {
@@ -75,7 +75,7 @@ export const siteConfig = {
       image: "https://placehold.co/600x400.png",
       dataAiHint: "team collaboration",
       techStack: ["Node.js", "Express", "MongoDB", "React", "Socket.IO", "Next.js"],
-      liveLink: "#",
+      liveLink: "https://example.com/nexus-task-manager-demo",
       repoLink: "https://github.com/your-github-username/nexus-task-manager-placeholder",
     },
     {
@@ -86,7 +86,7 @@ export const siteConfig = {
       image: "https://placehold.co/600x400.png",
       dataAiHint: "smart home",
       techStack: ["ESP32", "MQTT", "Node-RED", "InfluxDB", "Grafana", "Flutter"],
-      liveLink: "#",
+      liveLink: "https://example.com/aurahome-iot-demo",
       repoLink: "https://github.com/your-github-username/aurahome-iot-placeholder",
     },
     {
@@ -97,7 +97,7 @@ export const siteConfig = {
       image: "https://placehold.co/600x400.png", 
       dataAiHint: "agile sprint",
       techStack: ["MongoDB", "Express", "React", "Node.js", "Socket.IO"],
-      liveLink: "#", 
+      liveLink: "https://example.com/smart-sprints-demo", 
       repoLink: "https://github.com/Shivam09xc/Smart-Sprints.git",
     },
     {
