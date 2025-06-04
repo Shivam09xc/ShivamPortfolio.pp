@@ -108,7 +108,7 @@ export const siteConfig = {
       dataAiHint: "text editor",
       techStack: ["Python", "NLTK", "FastAPI", "Next.js", "Genkit"],
       repoLink: "https://github.com/Shivam09xc/TextRefine.AI",
-      liveLink: "https://example.com/textrefine-ai-demo-placeholder"
+      liveLink: "https://text-refine-ai.vercel.app/"
     },
   ] as Project[],
   skills: [
