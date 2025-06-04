@@ -93,8 +93,8 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
-    background: linear-gradient(-45deg, hsl(var(--background)), hsl(216, 38%, 18%)), hsl(216, 38%, 25%), hsl(var(--background));
+    @apply bg-background text-accent;
+    background: linear-gradient(-45deg, hsl(var(--background)), hsl(216, 38%, 18%), hsl(216, 38%, 25%), hsl(var(--background)));
     background-size: 400% 400%;
     animation: gradientBG 25s ease infinite;
   }
