@@ -50,8 +50,8 @@ export const siteConfig = {
     { title: "Contact", href: "#contact" },
   ] as NavItem[],
   socialLinks: [
-    { name: "GitHub", href: "https://github.com", icon: Github },
-    { name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
+    { name: "GitHub", href: "https://github.com/yourusername", icon: Github },
+    { name: "LinkedIn", href: "https://linkedin.com/in/yourusername", icon: Linkedin },
     { name: "Twitter", href: "https://twitter.com", icon: Twitter },
   ] as SocialLink[],
   projects: [
