@@ -1,3 +1,4 @@
+
 "use client";
 
 import { siteConfig, Skill } from '@/config/site';
@@ -41,6 +42,7 @@ const educationData = [
 export default function ResumeSection() {
   const skillsRef = useRef<HTMLDivElement>(null);
   const [skillsVisible, setSkillsVisible] = useState(false);
+  const resumeUrl = "https://docs.google.com/document/d/1AC8Umh-F3vuP6bAVy9haSN3Xd0nHgKEf/export?format=pdf";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -125,8 +127,10 @@ export default function ResumeSection() {
         </div>
       </div>
       <div className="text-center mt-12">
-        <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/80 neon-glow-primary">
-          <Download className="mr-2 h-5 w-5" /> Download Full Resume (PDF)
+        <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/80 neon-glow-primary">
+          <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
+            <Download className="mr-2 h-5 w-5" /> Download Full Resume (PDF)
+          </a>
         </Button>
       </div>
     </SectionWrapper>
