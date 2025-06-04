@@ -7,7 +7,7 @@ import { AppProviders } from '@/components/app-providers';
 
 
 export const metadata: Metadata = {
-  title: 'TechCircuit Portfolio',
+  title: "Shivam's Portfolio",
   description: 'Engineer. Developer. Futurist. Welcome to my portfolio.',
 };
 
