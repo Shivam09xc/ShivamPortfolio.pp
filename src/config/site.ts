@@ -65,7 +65,7 @@ export const siteConfig = {
       dataAiHint: "3d printer",
       techStack: ["Python", "TensorFlow", "Flask", "React", "Docker"],
       liveLink: "#",
-      repoLink: "#",
+      repoLink: "https://github.com/your-github-username/smartprint-ai-placeholder",
     },
     {
       id: "task-manager",
@@ -76,7 +76,7 @@ export const siteConfig = {
       dataAiHint: "team collaboration",
       techStack: ["Node.js", "Express", "MongoDB", "React", "Socket.IO", "Next.js"],
       liveLink: "#",
-      repoLink: "#",
+      repoLink: "https://github.com/your-github-username/nexus-task-manager-placeholder",
     },
     {
       id: "iot-home",
@@ -87,7 +87,7 @@ export const siteConfig = {
       dataAiHint: "smart home",
       techStack: ["ESP32", "MQTT", "Node-RED", "InfluxDB", "Grafana", "Flutter"],
       liveLink: "#",
-      repoLink: "#",
+      repoLink: "https://github.com/your-github-username/aurahome-iot-placeholder",
     },
     {
       id: "smart-sprints",
@@ -106,7 +106,7 @@ export const siteConfig = {
       description: "An AI-powered text refinement tool for grammar, style, and clarity.",
       image: "https://placehold.co/600x400.png", 
       dataAiHint: "text editor",
-      techStack: [], // You can add tech stack later if needed
+      techStack: [], 
       repoLink: "https://github.com/Shivam09xc/TextRefine.AI",
     },
   ] as Project[],
