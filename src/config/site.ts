@@ -51,9 +51,9 @@ export const siteConfig = {
     { title: "Contact", href: "#contact" },
   ] as NavItem[],
   socialLinks: [
-    { name: "GitHub", href: "https://github.com/your-github-username", icon: Github },
-    { name: "LinkedIn", href: "https://linkedin.com/in/your-linkedin-profile", icon: Linkedin },
-    { name: "Twitter", href: "https://twitter.com", icon: Twitter },
+    { name: "GitHub", href: "https://github.com/your-github-username-placeholder", icon: Github },
+    { name: "LinkedIn", href: "https://linkedin.com/in/your-linkedin-profile-placeholder", icon: Linkedin },
+    { name: "Twitter", href: "https://twitter.com/placeholder", icon: Twitter },
   ] as SocialLink[],
   projects: [
     {
@@ -64,7 +64,7 @@ export const siteConfig = {
       image: "https://placehold.co/600x400.png",
       dataAiHint: "3d printer",
       techStack: ["Python", "TensorFlow", "Flask", "React", "Docker"],
-      liveLink: "https://example.com/smartprint-ai-demo",
+      liveLink: "https://example.com/smartprint-ai-demo-placeholder",
       repoLink: "https://github.com/your-github-username/smartprint-ai-placeholder",
     },
     {
@@ -75,7 +75,7 @@ export const siteConfig = {
       image: "https://placehold.co/600x400.png",
       dataAiHint: "team collaboration",
       techStack: ["Node.js", "Express", "MongoDB", "React", "Socket.IO", "Next.js"],
-      liveLink: "https://example.com/nexus-task-manager-demo",
+      liveLink: "https://example.com/nexus-task-manager-demo-placeholder",
       repoLink: "https://github.com/your-github-username/nexus-task-manager-placeholder",
     },
     {
@@ -86,7 +86,7 @@ export const siteConfig = {
       image: "https://placehold.co/600x400.png",
       dataAiHint: "smart home",
       techStack: ["ESP32", "MQTT", "Node-RED", "InfluxDB", "Grafana", "Flutter"],
-      liveLink: "https://example.com/aurahome-iot-demo",
+      liveLink: "https://example.com/aurahome-iot-demo-placeholder",
       repoLink: "https://github.com/your-github-username/aurahome-iot-placeholder",
     },
     {
@@ -94,19 +94,19 @@ export const siteConfig = {
       title: "Smart-Sprints",
       description: "A productivity application built with the MERN stack to streamline workflow and collaboration.",
       longDescription: "Smart-Sprints is designed to empower individuals and teams to manage tasks efficiently and collaborate seamlessly. It offers features like project boards, task assignments, progress tracking, and real-time updates to enhance productivity.",
-      image: "https://placehold.co/600x400.png", 
+      image: "https://placehold.co/600x400.png",
       dataAiHint: "agile sprint",
       techStack: ["MongoDB", "Express", "React", "Node.js", "Socket.IO"],
-      liveLink: "https://smart-sprints.vercel.app/", 
+      liveLink: "https://smart-sprints.vercel.app/",
       repoLink: "https://github.com/Shivam09xc/Smart-Sprints.git",
     },
     {
       id: "textrefine-ai",
       title: "TextRefine.AI",
       description: "An AI-powered text refinement tool for grammar, style, and clarity.",
-      image: "https://placehold.co/600x400.png", 
+      image: "https://placehold.co/600x400.png",
       dataAiHint: "text editor",
-      techStack: [], 
+      techStack: ["AI/ML", "Natural Language Processing", "Web UI"],
       repoLink: "https://github.com/Shivam09xc/TextRefine.AI",
     },
   ] as Project[],
