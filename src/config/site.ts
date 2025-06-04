@@ -1,3 +1,4 @@
+
 export type NavItem = {
   title: string;
   href: string;
@@ -50,8 +51,8 @@ export const siteConfig = {
     { title: "Contact", href: "#contact" },
   ] as NavItem[],
   socialLinks: [
-    { name: "GitHub", href: "https://github.com/yourusername", icon: Github },
-    { name: "LinkedIn", href: "https://linkedin.com/in/yourusername", icon: Linkedin },
+    { name: "GitHub", href: "https://github.com/your-github-username", icon: Github },
+    { name: "LinkedIn", href: "https://linkedin.com/in/your-linkedin-profile", icon: Linkedin },
     { name: "Twitter", href: "https://twitter.com", icon: Twitter },
   ] as SocialLink[],
   projects: [
@@ -87,6 +88,26 @@ export const siteConfig = {
       techStack: ["ESP32", "MQTT", "Node-RED", "InfluxDB", "Grafana", "Flutter"],
       liveLink: "#",
       repoLink: "#",
+    },
+    {
+      id: "smart-sprints",
+      title: "Smart-Sprints",
+      description: "A productivity application built with the MERN stack to streamline workflow and collaboration.",
+      longDescription: "Smart-Sprints is designed to empower individuals and teams to manage tasks efficiently and collaborate seamlessly. It offers features like project boards, task assignments, progress tracking, and real-time updates to enhance productivity.",
+      image: "https://placehold.co/600x400.png", 
+      dataAiHint: "agile sprint",
+      techStack: ["MongoDB", "Express", "React", "Node.js", "Socket.IO"],
+      liveLink: "#", 
+      repoLink: "https://github.com/Shivam09xc/Smart-Sprints.git",
+    },
+    {
+      id: "textrefine-ai",
+      title: "TextRefine.AI",
+      description: "An AI-powered text refinement tool for grammar, style, and clarity.",
+      image: "https://placehold.co/600x400.png", 
+      dataAiHint: "text editor",
+      techStack: [], // You can add tech stack later if needed
+      repoLink: "https://github.com/Shivam09xc/TextRefine.AI",
     },
   ] as Project[],
   skills: [
